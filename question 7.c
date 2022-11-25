@@ -5,14 +5,16 @@ int main()
 { int n,sum;
     printf("Enter range to print square of natural numbers: ");
     scanf("%d",&n);
-       sum=square(n);
-        printf("sum is %d",sum);
+       square(n);
+
  return 0;
 }
 int square(int x)
 { int sum=0;
-    if(x>0)
-   sum=x*x+square(x-1);
+    if(x>1)
+    square(x-1);
+    sum=x*x;
+    printf("%d\n",sum);
 return sum;
 }
 
